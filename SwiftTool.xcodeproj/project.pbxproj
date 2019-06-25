@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		188818E422C1AEB900551272 /* RotationExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188818E322C1AEB900551272 /* RotationExampleViewController.swift */; };
 		EE710BC922C128750069D653 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE710BC822C128750069D653 /* AppDelegate.swift */; };
 		EE710BCB22C128750069D653 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE710BCA22C128750069D653 /* ViewController.swift */; };
 		EE710BCE22C128750069D653 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE710BCC22C128750069D653 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		188818E322C1AEB900551272 /* RotationExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationExampleViewController.swift; sourceTree = "<group>"; };
 		19479809F2C08548E4748852 /* Pods-SwiftTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTool.debug.xcconfig"; path = "Target Support Files/Pods-SwiftTool/Pods-SwiftTool.debug.xcconfig"; sourceTree = "<group>"; };
 		5BC5EFB48A9F502735E19345 /* Pods-SwiftTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTool.release.xcconfig"; path = "Target Support Files/Pods-SwiftTool/Pods-SwiftTool.release.xcconfig"; sourceTree = "<group>"; };
 		E87066C106695801C3FFFABD /* Pods_SwiftTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				EE710BFA22C12AAB0069D653 /* NetworkRequestExampleViewController.swift */,
+				188818E322C1AEB900551272 /* RotationExampleViewController.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				EE710BFB22C12AAB0069D653 /* NetworkRequestExampleViewController.swift in Sources */,
 				EE710BFD22C12C180069D653 /* YHPermission.swift in Sources */,
 				EE710BEF22C129450069D653 /* YHHUD.swift in Sources */,
+				188818E422C1AEB900551272 /* RotationExampleViewController.swift in Sources */,
 				EE710BCB22C128750069D653 /* ViewController.swift in Sources */,
 				EE710BEC22C129450069D653 /* YHNet.swift in Sources */,
 				EE710BF022C129450069D653 /* YHRotation.swift in Sources */,
