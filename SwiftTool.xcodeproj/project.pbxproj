@@ -29,6 +29,7 @@
 		EE710BF822C129450069D653 /* YHLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE710BEA22C129450069D653 /* YHLog.swift */; };
 		EE710BFB22C12AAB0069D653 /* NetworkRequestExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE710BFA22C12AAB0069D653 /* NetworkRequestExampleViewController.swift */; };
 		EE710BFD22C12C180069D653 /* YHPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE710BFC22C12C180069D653 /* YHPermission.swift */; };
+		EED74EBA22C26CF4000E9C5B /* YHPermissionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED74EB922C26CF4000E9C5B /* YHPermissionProtocol.swift */; };
 		FD872FB435558C9C75798C8A /* Pods_SwiftTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87066C106695801C3FFFABD /* Pods_SwiftTool.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		EE710BEA22C129450069D653 /* YHLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHLog.swift; sourceTree = "<group>"; };
 		EE710BFA22C12AAB0069D653 /* NetworkRequestExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestExampleViewController.swift; sourceTree = "<group>"; };
 		EE710BFC22C12C180069D653 /* YHPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHPermission.swift; sourceTree = "<group>"; };
+		EED74EB922C26CF4000E9C5B /* YHPermissionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHPermissionProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				EE710BDC22C129450069D653 /* YHNet.swift */,
 				EE710BE022C129450069D653 /* YHRotation.swift */,
 				EE710BFC22C12C180069D653 /* YHPermission.swift */,
+				EED74EB922C26CF4000E9C5B /* YHPermissionProtocol.swift */,
 				EE710BE722C129450069D653 /* YHSwiftTool_OC_Header.h */,
 			);
 			path = SwiftTool;
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE710BF822C129450069D653 /* YHLog.swift in Sources */,
+				EED74EBA22C26CF4000E9C5B /* YHPermissionProtocol.swift in Sources */,
 				EE710BEB22C129450069D653 /* YHBaseViewController.swift in Sources */,
 				EE710BFB22C12AAB0069D653 /* NetworkRequestExampleViewController.swift in Sources */,
 				EE710BFD22C12C180069D653 /* YHPermission.swift in Sources */,
