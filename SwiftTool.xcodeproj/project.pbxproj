@@ -17,6 +17,7 @@
 		1840BCD922C348C700B6C2A8 /* YHConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840BCD822C348C700B6C2A8 /* YHConstant.swift */; };
 		1840BCDB22C3745A00B6C2A8 /* DeviceInfoExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840BCDA22C3745A00B6C2A8 /* DeviceInfoExampleViewController.swift */; };
 		188818E422C1AEB900551272 /* RotationExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188818E322C1AEB900551272 /* RotationExampleViewController.swift */; };
+		EE54604822C3BCDB00AC2F6C /* YHTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE54604722C3BCDB00AC2F6C /* YHTool.swift */; };
 		EE710BC922C128750069D653 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE710BC822C128750069D653 /* AppDelegate.swift */; };
 		EE710BCB22C128750069D653 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE710BCA22C128750069D653 /* ViewController.swift */; };
 		EE710BCE22C128750069D653 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE710BCC22C128750069D653 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		19479809F2C08548E4748852 /* Pods-SwiftTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTool.debug.xcconfig"; path = "Target Support Files/Pods-SwiftTool/Pods-SwiftTool.debug.xcconfig"; sourceTree = "<group>"; };
 		5BC5EFB48A9F502735E19345 /* Pods-SwiftTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTool.release.xcconfig"; path = "Target Support Files/Pods-SwiftTool/Pods-SwiftTool.release.xcconfig"; sourceTree = "<group>"; };
 		E87066C106695801C3FFFABD /* Pods_SwiftTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE54604722C3BCDB00AC2F6C /* YHTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHTool.swift; sourceTree = "<group>"; };
 		EE710BC522C128750069D653 /* SwiftTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE710BC822C128750069D653 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE710BCA22C128750069D653 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				1840BCD022C3415100B6C2A8 /* YHColorExtension.swift */,
 				1840BCD222C3417200B6C2A8 /* YHDeviceExtension.swift */,
 				1840BCD822C348C700B6C2A8 /* YHConstant.swift */,
+				EE54604722C3BCDB00AC2F6C /* YHTool.swift */,
 				1840BCD622C341AE00B6C2A8 /* YHBundleExtension.swift */,
 				1840BCCE22C33E9E00B6C2A8 /* YHViewControllerExtension.swift */,
 				1840BCCA22C33D6100B6C2A8 /* YHButtonExtension.swift */,
@@ -320,6 +323,7 @@
 				EE710BF622C129450069D653 /* YHAppStatus.swift in Sources */,
 				1840BCD122C3415100B6C2A8 /* YHColorExtension.swift in Sources */,
 				1840BCD922C348C700B6C2A8 /* YHConstant.swift in Sources */,
+				EE54604822C3BCDB00AC2F6C /* YHTool.swift in Sources */,
 				EE710BF722C129450069D653 /* testtesttest.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
