@@ -8,17 +8,24 @@
 
 import UIKit
 
+enum PushType {
+    case networkRequest
+    case rotation
+    case permission
+    case deviceInfo
+}
 
 class Example: NSObject {
-    var cls: AnyObject.Type
+    let type: PushType
+    let title: String
     
-    init(cls: AnyObject.Type) {
-        self.cls = cls
+    init(title: String, type: PushType) {
+        self.title = title
+        self.type = type
     }
 }
 
-
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController {
     
     var dataSource:[Example] = [Example]()
     
@@ -47,33 +54,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         self.navigationItem.title = "Example"
         
-        dataSource.append(Example(cls: RotationExampleViewController.self))
+        dataSource.append(Example(title:"屏幕旋转Demo", type: .rotation))
+        dataSource.append(Example(title:"权限请求Demo", type: .permission))
+        dataSource.append(Example(title:"设备信息Demo", type: .deviceInfo))
 
         view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
             make.edges.equalTo(view)
         }
+        
+        UIDevice.YHPrintBasicInfo()
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let example = dataSource[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "example")!
-        cell.textLabel?.text = NSStringFromClass(example.cls)
-        return cell
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        let example = dataSource[indexPath.row]
-        let cls = example.cls.alloc()
-        if let vc = cls as? UIViewController {
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
-    }
+    
 
 
 
@@ -88,5 +81,35 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .portrait
+    }
+}
+
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataSource.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let example = dataSource[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "example")!
+        cell.textLabel?.text = example.title
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let example = dataSource[indexPath.row]
+        switch example.type {
+        case .rotation:
+            self.navigationController?.pushViewController(RotationExampleViewController(), animated: true)
+        case .permission:
+            self.navigationController?.pushViewController(PermissionExampleViewController(), animated: true)
+        case .deviceInfo:
+            self.navigationController?.pushViewController(DeviceInfoExampleViewController(), animated: true)
+        default:
+            break
+        }
+        
     }
 }
