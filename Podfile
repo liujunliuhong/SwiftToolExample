@@ -5,8 +5,8 @@ target 'SwiftTool' do
   pod 'Moya'
   pod 'MBProgressHUD'
   pod 'SnapKit'
-  
   pod 'HandyJSON'
   pod 'SwiftyJSON'
-  
+  pod 'RxSwift'
+  pod 'RxCocoa'
 end

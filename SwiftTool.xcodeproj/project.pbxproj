@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181BE21122C487A200EBB1DB /* JsonExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BE21022C487A200EBB1DB /* JsonExampleViewController.swift */; };
+		181BE21322C48CE100EBB1DB /* exampleJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 181BE21222C48CE100EBB1DB /* exampleJSON.json */; };
+		181BE24622C4F0EE00EBB1DB /* RxSwiftExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BE24522C4F0EE00EBB1DB /* RxSwiftExampleViewController.swift */; };
 		1840BCC422C31ED400B6C2A8 /* PermissionExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840BCC322C31ED400B6C2A8 /* PermissionExampleViewController.swift */; };
 		1840BCCB22C33D6100B6C2A8 /* YHButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840BCCA22C33D6100B6C2A8 /* YHButtonExtension.swift */; };
 		1840BCCD22C33DD100B6C2A8 /* YHViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840BCCC22C33DD100B6C2A8 /* YHViewExtension.swift */; };
@@ -39,6 +42,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		181BE21022C487A200EBB1DB /* JsonExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonExampleViewController.swift; sourceTree = "<group>"; };
+		181BE21222C48CE100EBB1DB /* exampleJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = exampleJSON.json; sourceTree = "<group>"; };
+		181BE24522C4F0EE00EBB1DB /* RxSwiftExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftExampleViewController.swift; sourceTree = "<group>"; };
 		1840BCC322C31ED400B6C2A8 /* PermissionExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionExampleViewController.swift; sourceTree = "<group>"; };
 		1840BCCA22C33D6100B6C2A8 /* YHButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHButtonExtension.swift; sourceTree = "<group>"; };
 		1840BCCC22C33DD100B6C2A8 /* YHViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHViewExtension.swift; sourceTree = "<group>"; };
@@ -181,6 +187,9 @@
 				188818E322C1AEB900551272 /* RotationExampleViewController.swift */,
 				1840BCC322C31ED400B6C2A8 /* PermissionExampleViewController.swift */,
 				1840BCDA22C3745A00B6C2A8 /* DeviceInfoExampleViewController.swift */,
+				181BE21022C487A200EBB1DB /* JsonExampleViewController.swift */,
+				181BE21222C48CE100EBB1DB /* exampleJSON.json */,
+				181BE24522C4F0EE00EBB1DB /* RxSwiftExampleViewController.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -245,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181BE21322C48CE100EBB1DB /* exampleJSON.json in Resources */,
 				EE710BD322C128760069D653 /* LaunchScreen.storyboard in Resources */,
 				EE710BD022C128760069D653 /* Assets.xcassets in Resources */,
 				EE710BF322C129450069D653 /* README.md in Resources */,
@@ -305,6 +315,8 @@
 				EE710BEB22C129450069D653 /* YHBaseViewController.swift in Sources */,
 				EE710BFB22C12AAB0069D653 /* NetworkRequestExampleViewController.swift in Sources */,
 				EE710BFD22C12C180069D653 /* YHPermission.swift in Sources */,
+				181BE21122C487A200EBB1DB /* JsonExampleViewController.swift in Sources */,
+				181BE24622C4F0EE00EBB1DB /* RxSwiftExampleViewController.swift in Sources */,
 				1840BCD722C341AE00B6C2A8 /* YHBundleExtension.swift in Sources */,
 				EE710BEF22C129450069D653 /* YHHUD.swift in Sources */,
 				188818E422C1AEB900551272 /* RotationExampleViewController.swift in Sources */,

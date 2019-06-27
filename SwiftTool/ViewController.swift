@@ -13,6 +13,8 @@ enum PushType {
     case rotation
     case permission
     case deviceInfo
+    case json
+    case rxswift
 }
 
 class Example: NSObject {
@@ -55,8 +57,11 @@ class ViewController: UIViewController {
         self.navigationItem.title = "Example"
         
         dataSource.append(Example(title:"屏幕旋转Demo", type: .rotation))
+        dataSource.append(Example(title:"网络请求Demo", type: .networkRequest))
         dataSource.append(Example(title:"权限请求Demo", type: .permission))
         dataSource.append(Example(title:"设备信息Demo", type: .deviceInfo))
+        dataSource.append(Example(title:"SwiftJSON解析Demo", type: .json))
+        dataSource.append(Example(title:"RxSwift Demo", type: .rxswift))
 
         view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
@@ -107,6 +112,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             self.navigationController?.pushViewController(PermissionExampleViewController(), animated: true)
         case .deviceInfo:
             self.navigationController?.pushViewController(DeviceInfoExampleViewController(), animated: true)
+        case .json:
+            self.navigationController?.pushViewController(JsonExampleViewController(), animated: true)
+        case .networkRequest:
+            self.navigationController?.pushViewController(NetworkRequestExampleViewController(), animated: true)
+        case .rxswift:
+            self.navigationController?.pushViewController(RxSwiftExampleViewController(), animated: true)
         default:
             break
         }
