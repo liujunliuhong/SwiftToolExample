@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 enum PushType {
     case networkRequest
@@ -31,6 +33,7 @@ class ViewController: UIViewController {
     
     var dataSource:[Example] = [Example]()
     
+    let disposeBag = DisposeBag()
 
     lazy var tableView: UITableView = {
        let tableView = UITableView(frame: .zero, style: .plain)
@@ -69,12 +72,60 @@ class ViewController: UIViewController {
         }
         
         UIDevice.YHPrintBasicInfo()
+        
+        // RxSwift
+//        YHDebugLog("RxSwift")
+//        let numbers: Observable<Int> = Observable<Int>.create { (observer) -> Disposable in
+//            observer.onNext(1)
+//            observer.onNext(2)
+//            observer.onNext(3)
+//            observer.onCompleted()
+//            return Disposables.create()
+//        }
+//
+//        numbers.subscribe(onNext: { (value) in
+//            print(value)
+//        }, onError: { (error) in
+//            print("Error: \(error)")
+//        }, onCompleted: {
+//            print("onCompleted")
+//        }) {
+//            print("onDispose")
+//        }.disposed(by: disposeBag)
+//
+//
+//        let single = Single<Int>.create { (single) -> Disposable in
+//            single(.success(2))
+//            //single(.error(<#T##Error#>))
+//            return Disposables.create()
+//        }
+//
+//        let complete =  Completable.create { (complete) -> Disposable in
+//            complete(.completed)
+//            //complete(.error(<#T##Error#>))
+//            return Disposables.create()
+//        }
+//
+//        Maybe<Int>.create { (maybe) -> Disposable in
+//            maybe(.success(1))
+//            maybe(.completed)
+//            //maybe(.error(<#T##Error#>))
+//            return Disposables.create()
+//        }
+//        //
+//        let textField = UITextField()
+//        let m = textField.rx.text.asDriver()
+//
+//        let button = UIButton(type: .custom)
+//        button.rx.tap.asSignal()
+//
+//        button.rx.isHidden
+//
+//
+//        let observer: Binder<Bool> = Binder(textField) { (textField, isHide) in
+        
+//        }
     }
-
-    
-
-
-
     // 使屏幕竖屏，即使从另外一个横屏页面返回也是竖屏
     override var shouldAutorotate: Bool {
         return true
