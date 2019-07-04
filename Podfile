@@ -9,4 +9,9 @@ target 'SwiftTool' do
   pod 'SwiftyJSON'
   pod 'RxSwift'
   pod 'RxCocoa'
+  #pod 'RxAlamofire'
+  #pod 'RxDataSources'
+  #pod 'RxCocoa-Texture'
+  pod 'Then'
+  #pod 'Moya/RxSwift'
 end

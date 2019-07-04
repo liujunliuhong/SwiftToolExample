@@ -22,7 +22,6 @@ struct RxSwiftInputValidateViewModel {
     let everythingValid: Observable<Bool>
     
     init(username: Observable<String>, password: Observable<String>) {
-        
         self.usernameValid = username.map { $0.count >= minimalUsernameLength }.share(replay: 1)
         self.passwordValid = password.map { $0.count >= minimalPasswordLength }.share(replay: 1)
         
