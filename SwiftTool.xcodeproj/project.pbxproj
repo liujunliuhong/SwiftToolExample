@@ -19,6 +19,7 @@
 		1840BCD722C341AE00B6C2A8 /* YHBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840BCD622C341AE00B6C2A8 /* YHBundleExtension.swift */; };
 		1840BCD922C348C700B6C2A8 /* YHConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840BCD822C348C700B6C2A8 /* YHConstant.swift */; };
 		1840BCDB22C3745A00B6C2A8 /* DeviceInfoExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840BCDA22C3745A00B6C2A8 /* DeviceInfoExampleViewController.swift */; };
+		184FB76622CF6D4100D84A24 /* YHRXAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184FB76522CF6D4100D84A24 /* YHRXAlamofire.swift */; };
 		188818E422C1AEB900551272 /* RotationExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188818E322C1AEB900551272 /* RotationExampleViewController.swift */; };
 		1896DA4822C5C113006154F0 /* RxSwiftInputValidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896DA4622C5C113006154F0 /* RxSwiftInputValidateViewController.swift */; };
 		1896DA4922C5C113006154F0 /* RxSwiftInputValidateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1896DA4722C5C113006154F0 /* RxSwiftInputValidateViewController.xib */; };
@@ -57,6 +58,7 @@
 		1840BCD622C341AE00B6C2A8 /* YHBundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHBundleExtension.swift; sourceTree = "<group>"; };
 		1840BCD822C348C700B6C2A8 /* YHConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHConstant.swift; sourceTree = "<group>"; };
 		1840BCDA22C3745A00B6C2A8 /* DeviceInfoExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoExampleViewController.swift; sourceTree = "<group>"; };
+		184FB76522CF6D4100D84A24 /* YHRXAlamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHRXAlamofire.swift; sourceTree = "<group>"; };
 		188818E322C1AEB900551272 /* RotationExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationExampleViewController.swift; sourceTree = "<group>"; };
 		1896DA4622C5C113006154F0 /* RxSwiftInputValidateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftInputValidateViewController.swift; sourceTree = "<group>"; };
 		1896DA4722C5C113006154F0 /* RxSwiftInputValidateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RxSwiftInputValidateViewController.xib; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				EE710BDF22C129450069D653 /* YHHUD.swift */,
 				EE710BEA22C129450069D653 /* YHLog.swift */,
 				EE710BDC22C129450069D653 /* YHNet.swift */,
+				184FB76522CF6D4100D84A24 /* YHRXAlamofire.swift */,
 				EE710BE022C129450069D653 /* YHRotation.swift */,
 				EE710BFC22C12C180069D653 /* YHPermission.swift */,
 				EE710BE722C129450069D653 /* YHSwiftTool_OC_Header.h */,
@@ -330,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE710BF822C129450069D653 /* YHLog.swift in Sources */,
+				184FB76622CF6D4100D84A24 /* YHRXAlamofire.swift in Sources */,
 				EE710BEB22C129450069D653 /* YHBaseViewController.swift in Sources */,
 				EE710BFB22C12AAB0069D653 /* NetworkRequestExampleViewController.swift in Sources */,
 				EE710BFD22C12C180069D653 /* YHPermission.swift in Sources */,
