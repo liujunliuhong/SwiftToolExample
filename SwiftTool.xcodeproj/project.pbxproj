@@ -183,7 +183,7 @@
 				EE710BDF22C129450069D653 /* YHHUD.swift */,
 				EE710BEA22C129450069D653 /* YHLog.swift */,
 				EE710BDC22C129450069D653 /* YHNet.swift */,
-				184FB76522CF6D4100D84A24 /* YHRXAlamofire.swift */,
+				EEA85D8E22D0E8C00097854B /* NetworkRequest */,
 				EE710BE022C129450069D653 /* YHRotation.swift */,
 				EE710BFC22C12C180069D653 /* YHPermission.swift */,
 				EE710BE722C129450069D653 /* YHSwiftTool_OC_Header.h */,
@@ -212,6 +212,14 @@
 				1896DA4522C5C0BA006154F0 /* RxSwiftExample */,
 			);
 			path = Example;
+			sourceTree = "<group>";
+		};
+		EEA85D8E22D0E8C00097854B /* NetworkRequest */ = {
+			isa = PBXGroup;
+			children = (
+				184FB76522CF6D4100D84A24 /* YHRXAlamofire.swift */,
+			);
+			path = NetworkRequest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
