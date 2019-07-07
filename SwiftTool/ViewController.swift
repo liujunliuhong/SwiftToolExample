@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Alamofire
 
 enum PushType {
     case networkRequest
@@ -28,6 +29,8 @@ class Example: NSObject {
         self.type = type
     }
 }
+
+let disposeBag = DisposeBag()
 
 class ViewController: UIViewController {
     
@@ -155,23 +158,85 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let example = dataSource[indexPath.row]
-        switch example.type {
-        case .rotation:
-            self.navigationController?.pushViewController(RotationExampleViewController(), animated: true)
-        case .permission:
-            self.navigationController?.pushViewController(PermissionExampleViewController(), animated: true)
-        case .deviceInfo:
-            self.navigationController?.pushViewController(DeviceInfoExampleViewController(), animated: true)
-        case .json:
-            self.navigationController?.pushViewController(JsonExampleViewController(), animated: true)
-        case .networkRequest:
-            self.navigationController?.pushViewController(NetworkRequestExampleViewController(), animated: true)
-        case .rxswift:
-            self.navigationController?.pushViewController(RxSwiftExampleViewController(), animated: true)
-        default:
-            break
-        }
+//        let example = dataSource[indexPath.row]
+//        switch example.type {
+//        case .rotation:
+//            self.navigationController?.pushViewController(RotationExampleViewController(), animated: true)
+//        case .permission:
+//            self.navigationController?.pushViewController(PermissionExampleViewController(), animated: true)
+//        case .deviceInfo:
+//            self.navigationController?.pushViewController(DeviceInfoExampleViewController(), animated: true)
+//        case .json:
+//            self.navigationController?.pushViewController(JsonExampleViewController(), animated: true)
+//        case .networkRequest:
+//            self.navigationController?.pushViewController(NetworkRequestExampleViewController(), animated: true)
+//        case .rxswift:
+//            self.navigationController?.pushViewController(RxSwiftExampleViewController(), animated: true)
+//        default:
+//            break
+//        }
         
+        let test = Test()
+        
+        YHRXAlamofire.requestJSON(request: test).subscribe(onNext: { (json, progress) in
+//            print("请求成功-数据:\(json)")
+            print("请求进度-数据:\(progress)")
+        }, onError: { (error) in
+            print("请求失败:\(error)")
+        }, onCompleted: {
+            print("请求完成")
+        }) {
+            print("dispose")
+        }.disposed(by: disposeBag)
+        
+        
+//        request("https://github.com/onevcat/Kingfisher/issues/1195", method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).downloadProgress { (progress) in
+//            print("\(progress.totalUnitCount) ---   \(progress.completedUnitCount)")
+//            }.responseJSON { (response) in
+////                print(response.value ?? "")
+//        }
     }
+}
+
+
+
+
+struct Test: YHRXAlamofireRequestProtocol {
+    var baseURL: String {
+        return "https://stackoverflow.com/users/11748407/jun"
+    }
+    
+    var path: String {
+        return ""
+    }
+    
+    var method: HTTPMethod {
+        return .get
+    }
+    
+    var headers: [String : String]? {
+        return nil
+    }
+    
+    var isShowHUD: Bool {
+        return true
+    }
+    
+    var parameters: Parameters? {
+        return nil
+    }
+    
+    var encoding: ParameterEncoding {
+        return URLEncoding.default
+    }
+    
+    var hudShowInView: UIView {
+        return UIApplication.shared.keyWindow!
+    }
+    
+    var timeOutInterval: TimeInterval {
+        return 60
+    }
+    
+    
 }
