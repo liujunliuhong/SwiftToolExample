@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Moya
 import Alamofire
 
 class NetworkRequestExampleViewController: UIViewController {

@@ -76,6 +76,17 @@ class ViewController: UIViewController {
         
         UIDevice.YHPrintBasicInfo()
         
+        
+        let parameters:[String: Any] = ["latitude":  35.0094040,
+                                       "longitude": -85.3275640,
+                                       "tag": "this is my fancy tag",
+                                       "image":"icecream.jpg"]
+        
+        
+//        print(query(parameters).data(using: .utf8, allowLossyConversion: false))
+        
+        
+        
         // RxSwift
 //        YHDebugLog("RxSwift")
 //        let numbers: Observable<Int> = Observable<Int>.create { (observer) -> Disposable in
@@ -176,18 +187,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 //            break
 //        }
         
-        let test = Test()
-        
-        YHRXAlamofire.requestJSON(request: test).subscribe(onNext: { (json, progress) in
-//            print("请求成功-数据:\(json)")
-            print("请求进度-数据:\(progress)")
-        }, onError: { (error) in
-            print("请求失败:\(error)")
-        }, onCompleted: {
-            print("请求完成")
-        }) {
-            print("dispose")
-        }.disposed(by: disposeBag)
+//        let test = Test()
+//        
+//        YHRXAlamofire.requestJSON(request: test).subscribe(onNext: { (json, progress) in
+////            print("请求成功-数据:\(json)")
+//            print("请求进度-数据:\(progress)")
+//        }, onError: { (error) in
+//            print("请求失败:\(error)")
+//        }, onCompleted: {
+//            print("请求完成")
+//        }) {
+//            print("dispose")
+//        }.disposed(by: disposeBag)
         
         
 //        request("https://github.com/onevcat/Kingfisher/issues/1195", method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).downloadProgress { (progress) in
@@ -195,27 +206,37 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 //            }.responseJSON { (response) in
 ////                print(response.value ?? "")
 //        }
+        
+        let request = Test()
+        YHAlamofire.request(request: request) { (result) in
+//            switch result.result {
+//            case let .success(value):
+//                print("成功 \(value)")
+//            case let .failure(error):
+//                print("失败 \(error)")
+//            }
+        }
     }
 }
 
 
 
 
-struct Test: YHRXAlamofireRequestProtocol {
+struct Test: YHAlamofireRequestProtocol {
     var baseURL: String {
-        return "https://stackoverflow.com/users/11748407/jun"
+        return "http://www.forfansjoy.com"
     }
     
     var path: String {
-        return ""
+        return "/hifan-api/hifan/api/fans/activity/list"
     }
     
     var method: HTTPMethod {
-        return .get
+        return .post
     }
     
     var headers: [String : String]? {
-        return nil
+        return ["token": "3c6c0dd0ea7647fdba8fa149751e67be"]
     }
     
     var isShowHUD: Bool {
@@ -223,19 +244,29 @@ struct Test: YHRXAlamofireRequestProtocol {
     }
     
     var parameters: Parameters? {
-        return nil
+        return ["pageNum": "1",
+                "pageSize": "20",
+                "type": "2"]
     }
     
     var encoding: ParameterEncoding {
-        return URLEncoding.default
+        return JSONEncoding.default
     }
     
-    var hudShowInView: UIView {
-        return UIApplication.shared.keyWindow!
+    var isForceShowHUDWhenRequest: Bool {
+        return true
     }
     
-    var timeOutInterval: TimeInterval {
-        return 60
+    func requestBegin() {
+        print("开始请求")
+    }
+    
+    func requestProgress(progress: Double) {
+        print("请求中 \(progress)")
+    }
+    
+    func requestEnd() {
+        print("请求结束")
     }
     
     
