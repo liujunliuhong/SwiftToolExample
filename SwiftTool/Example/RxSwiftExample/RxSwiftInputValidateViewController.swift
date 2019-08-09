@@ -21,7 +21,9 @@ class RxSwiftInputValidateViewController: UIViewController {
     @IBOutlet weak var passwordTipLabel: UILabel!
     @IBOutlet weak var doneButton: UIButton!
     
-    
+    deinit {
+        YHDebugLog("\(self.classForCoder) deinit")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

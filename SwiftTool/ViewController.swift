@@ -169,23 +169,23 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-//        let example = dataSource[indexPath.row]
-//        switch example.type {
-//        case .rotation:
-//            self.navigationController?.pushViewController(RotationExampleViewController(), animated: true)
-//        case .permission:
-//            self.navigationController?.pushViewController(PermissionExampleViewController(), animated: true)
-//        case .deviceInfo:
-//            self.navigationController?.pushViewController(DeviceInfoExampleViewController(), animated: true)
-//        case .json:
-//            self.navigationController?.pushViewController(JsonExampleViewController(), animated: true)
-//        case .networkRequest:
-//            self.navigationController?.pushViewController(NetworkRequestExampleViewController(), animated: true)
-//        case .rxswift:
-//            self.navigationController?.pushViewController(RxSwiftExampleViewController(), animated: true)
-//        default:
-//            break
-//        }
+        let example = dataSource[indexPath.row]
+        switch example.type {
+        case .rotation:
+            self.navigationController?.pushViewController(RotationExampleViewController(), animated: true)
+        case .permission:
+            self.navigationController?.pushViewController(PermissionExampleViewController(), animated: true)
+        case .deviceInfo:
+            self.navigationController?.pushViewController(DeviceInfoExampleViewController(), animated: true)
+        case .json:
+            self.navigationController?.pushViewController(JsonExampleViewController(), animated: true)
+        case .networkRequest:
+            self.navigationController?.pushViewController(NetworkRequestExampleViewController(), animated: true)
+        case .rxswift:
+            self.navigationController?.pushViewController(RxSwiftExampleViewController(), animated: true)
+        default:
+            break
+        }
         
 //        let test = Test()
 //        
@@ -207,15 +207,24 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 ////                print(response.value ?? "")
 //        }
         
-        let request = Test()
-        YHAlamofire.request(request: request) { (result) in
+//        let request = Test()
+//        YHAlamofire.request(request: request) { (result) in
 //            switch result.result {
 //            case let .success(value):
 //                print("成功 \(value)")
 //            case let .failure(error):
 //                print("失败 \(error)")
 //            }
-        }
+//        }
+        
+        
+//        _ = YHAlamofire.rx.requestJSON(request: request).takeUntil(self.rx.deallocated).subscribe(onNext: { (json) in
+//            print("成功")
+//        }, onError: { (error) in
+//            print("失败")
+//        }, onCompleted: {
+//            print("完成")
+//        })
     }
 }
 
@@ -252,22 +261,4 @@ struct Test: YHAlamofireRequestProtocol {
     var encoding: ParameterEncoding {
         return JSONEncoding.default
     }
-    
-    var isForceShowHUDWhenRequest: Bool {
-        return true
-    }
-    
-    func requestBegin() {
-        print("开始请求")
-    }
-    
-    func requestProgress(progress: Double) {
-        print("请求中 \(progress)")
-    }
-    
-    func requestEnd() {
-        print("请求结束")
-    }
-    
-    
 }

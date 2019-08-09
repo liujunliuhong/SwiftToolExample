@@ -17,7 +17,6 @@
 		1840BCD122C3415100B6C2A8 /* YHColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840BCD022C3415100B6C2A8 /* YHColorExtension.swift */; };
 		1840BCD322C3417200B6C2A8 /* YHDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840BCD222C3417200B6C2A8 /* YHDeviceExtension.swift */; };
 		1840BCD722C341AE00B6C2A8 /* YHBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840BCD622C341AE00B6C2A8 /* YHBundleExtension.swift */; };
-		1840BCD922C348C700B6C2A8 /* YHConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840BCD822C348C700B6C2A8 /* YHConstant.swift */; };
 		1840BCDB22C3745A00B6C2A8 /* DeviceInfoExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1840BCDA22C3745A00B6C2A8 /* DeviceInfoExampleViewController.swift */; };
 		184CAC3222FC137200642F3E /* YHResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184CAC3122FC137200642F3E /* YHResult.swift */; };
 		184FB76622CF6D4100D84A24 /* YHRXAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184FB76522CF6D4100D84A24 /* YHRXAlamofire.swift */; };
@@ -32,13 +31,10 @@
 		EE710BD022C128760069D653 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE710BCF22C128760069D653 /* Assets.xcassets */; };
 		EE710BD322C128760069D653 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE710BD122C128760069D653 /* LaunchScreen.storyboard */; };
 		EE710BEB22C129450069D653 /* YHBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE710BDB22C129450069D653 /* YHBaseViewController.swift */; };
-		EE710BEC22C129450069D653 /* YHNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE710BDC22C129450069D653 /* YHNet.swift */; };
 		EE710BEF22C129450069D653 /* YHHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE710BDF22C129450069D653 /* YHHUD.swift */; };
 		EE710BF022C129450069D653 /* YHRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE710BE022C129450069D653 /* YHRotation.swift */; };
 		EE710BF122C129450069D653 /* YHCusNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE710BE122C129450069D653 /* YHCusNavigationBar.swift */; };
 		EE710BF322C129450069D653 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EE710BE422C129450069D653 /* README.md */; };
-		EE710BF522C129450069D653 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE710BE622C129450069D653 /* StringExtension.swift */; };
-		EE710BF622C129450069D653 /* YHAppStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE710BE822C129450069D653 /* YHAppStatus.swift */; };
 		EE710BF722C129450069D653 /* testtesttest.c in Sources */ = {isa = PBXBuildFile; fileRef = EE710BE922C129450069D653 /* testtesttest.c */; };
 		EE710BF822C129450069D653 /* YHLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE710BEA22C129450069D653 /* YHLog.swift */; };
 		EE710BFB22C12AAB0069D653 /* NetworkRequestExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE710BFA22C12AAB0069D653 /* NetworkRequestExampleViewController.swift */; };
@@ -57,7 +53,6 @@
 		1840BCD022C3415100B6C2A8 /* YHColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHColorExtension.swift; sourceTree = "<group>"; };
 		1840BCD222C3417200B6C2A8 /* YHDeviceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHDeviceExtension.swift; sourceTree = "<group>"; };
 		1840BCD622C341AE00B6C2A8 /* YHBundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHBundleExtension.swift; sourceTree = "<group>"; };
-		1840BCD822C348C700B6C2A8 /* YHConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHConstant.swift; sourceTree = "<group>"; };
 		1840BCDA22C3745A00B6C2A8 /* DeviceInfoExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoExampleViewController.swift; sourceTree = "<group>"; };
 		184CAC3122FC137200642F3E /* YHResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHResult.swift; sourceTree = "<group>"; };
 		184FB76522CF6D4100D84A24 /* YHRXAlamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHRXAlamofire.swift; sourceTree = "<group>"; };
@@ -77,15 +72,12 @@
 		EE710BD222C128760069D653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE710BD422C128760069D653 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE710BDB22C129450069D653 /* YHBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHBaseViewController.swift; sourceTree = "<group>"; };
-		EE710BDC22C129450069D653 /* YHNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHNet.swift; sourceTree = "<group>"; };
 		EE710BDF22C129450069D653 /* YHHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHHUD.swift; sourceTree = "<group>"; };
 		EE710BE022C129450069D653 /* YHRotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHRotation.swift; sourceTree = "<group>"; };
 		EE710BE122C129450069D653 /* YHCusNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHCusNavigationBar.swift; sourceTree = "<group>"; };
 		EE710BE322C129450069D653 /* testtesttest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testtesttest.h; sourceTree = "<group>"; };
 		EE710BE422C129450069D653 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		EE710BE622C129450069D653 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		EE710BE722C129450069D653 /* YHSwiftTool_OC_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHSwiftTool_OC_Header.h; sourceTree = "<group>"; };
-		EE710BE822C129450069D653 /* YHAppStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHAppStatus.swift; sourceTree = "<group>"; };
 		EE710BE922C129450069D653 /* testtesttest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = testtesttest.c; sourceTree = "<group>"; };
 		EE710BEA22C129450069D653 /* YHLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHLog.swift; sourceTree = "<group>"; };
 		EE710BFA22C12AAB0069D653 /* NetworkRequestExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestExampleViewController.swift; sourceTree = "<group>"; };
@@ -104,9 +96,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		183F01E622FD471400EF7ADA /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				EE54604722C3BCDB00AC2F6C /* YHTool.swift */,
+				EE710BE022C129450069D653 /* YHRotation.swift */,
+				EE710BEA22C129450069D653 /* YHLog.swift */,
+				EE710BFC22C12C180069D653 /* YHPermission.swift */,
+				1840BCD022C3415100B6C2A8 /* YHColorExtension.swift */,
+				1840BCD222C3417200B6C2A8 /* YHDeviceExtension.swift */,
+				1840BCD622C341AE00B6C2A8 /* YHBundleExtension.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		183F01E722FD476200EF7ADA /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				EE710BDB22C129450069D653 /* YHBaseViewController.swift */,
+				EE710BE122C129450069D653 /* YHCusNavigationBar.swift */,
+			);
+			path = NavigationBar;
+			sourceTree = "<group>";
+		};
 		1840BCC522C3380B00B6C2A8 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				EE710BDF22C129450069D653 /* YHHUD.swift */,
+				1840BCCE22C33E9E00B6C2A8 /* YHViewControllerExtension.swift */,
+				1840BCCA22C33D6100B6C2A8 /* YHButtonExtension.swift */,
+				1840BCCC22C33DD100B6C2A8 /* YHViewExtension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -176,28 +195,12 @@
 			isa = PBXGroup;
 			children = (
 				EE710BE422C129450069D653 /* README.md */,
-				EE710BE622C129450069D653 /* StringExtension.swift */,
 				EE710BE922C129450069D653 /* testtesttest.c */,
 				EE710BE322C129450069D653 /* testtesttest.h */,
-				EE710BE822C129450069D653 /* YHAppStatus.swift */,
-				EE710BDB22C129450069D653 /* YHBaseViewController.swift */,
-				EE710BE122C129450069D653 /* YHCusNavigationBar.swift */,
-				EE710BDF22C129450069D653 /* YHHUD.swift */,
-				EE710BEA22C129450069D653 /* YHLog.swift */,
-				EE710BDC22C129450069D653 /* YHNet.swift */,
-				EEA85D8E22D0E8C00097854B /* NetworkRequest */,
-				EE710BE022C129450069D653 /* YHRotation.swift */,
-				184CAC3122FC137200642F3E /* YHResult.swift */,
-				EE710BFC22C12C180069D653 /* YHPermission.swift */,
 				EE710BE722C129450069D653 /* YHSwiftTool_OC_Header.h */,
-				1840BCD022C3415100B6C2A8 /* YHColorExtension.swift */,
-				1840BCD222C3417200B6C2A8 /* YHDeviceExtension.swift */,
-				1840BCD822C348C700B6C2A8 /* YHConstant.swift */,
-				EE54604722C3BCDB00AC2F6C /* YHTool.swift */,
-				1840BCD622C341AE00B6C2A8 /* YHBundleExtension.swift */,
-				1840BCCE22C33E9E00B6C2A8 /* YHViewControllerExtension.swift */,
-				1840BCCA22C33D6100B6C2A8 /* YHButtonExtension.swift */,
-				1840BCCC22C33DD100B6C2A8 /* YHViewExtension.swift */,
+				183F01E722FD476200EF7ADA /* NavigationBar */,
+				EEA85D8E22D0E8C00097854B /* NetworkRequest */,
+				183F01E622FD471400EF7ADA /* Foundation */,
 				1840BCC522C3380B00B6C2A8 /* UIKit */,
 			);
 			path = SwiftTool;
@@ -221,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				184FB76522CF6D4100D84A24 /* YHRXAlamofire.swift */,
+				184CAC3122FC137200642F3E /* YHResult.swift */,
 			);
 			path = NetworkRequest;
 			sourceTree = "<group>";
@@ -355,21 +359,17 @@
 				188818E422C1AEB900551272 /* RotationExampleViewController.swift in Sources */,
 				1896DA4822C5C113006154F0 /* RxSwiftInputValidateViewController.swift in Sources */,
 				EE710BCB22C128750069D653 /* ViewController.swift in Sources */,
-				EE710BEC22C129450069D653 /* YHNet.swift in Sources */,
 				EE710BF022C129450069D653 /* YHRotation.swift in Sources */,
 				1840BCC422C31ED400B6C2A8 /* PermissionExampleViewController.swift in Sources */,
 				EE710BF122C129450069D653 /* YHCusNavigationBar.swift in Sources */,
-				EE710BF522C129450069D653 /* StringExtension.swift in Sources */,
 				1840BCDB22C3745A00B6C2A8 /* DeviceInfoExampleViewController.swift in Sources */,
 				1840BCCF22C33E9E00B6C2A8 /* YHViewControllerExtension.swift in Sources */,
 				1840BCD322C3417200B6C2A8 /* YHDeviceExtension.swift in Sources */,
 				1840BCCD22C33DD100B6C2A8 /* YHViewExtension.swift in Sources */,
 				1840BCCB22C33D6100B6C2A8 /* YHButtonExtension.swift in Sources */,
 				EE710BC922C128750069D653 /* AppDelegate.swift in Sources */,
-				EE710BF622C129450069D653 /* YHAppStatus.swift in Sources */,
 				1896DA4B22C5F890006154F0 /* RxSwiftInputValidateViewModel.swift in Sources */,
 				1840BCD122C3415100B6C2A8 /* YHColorExtension.swift in Sources */,
-				1840BCD922C348C700B6C2A8 /* YHConstant.swift in Sources */,
 				EE54604822C3BCDB00AC2F6C /* YHTool.swift in Sources */,
 				EE710BF722C129450069D653 /* testtesttest.c in Sources */,
 				184CAC3222FC137200642F3E /* YHResult.swift in Sources */,
