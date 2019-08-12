@@ -24,6 +24,7 @@
 		1896DA4822C5C113006154F0 /* RxSwiftInputValidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896DA4622C5C113006154F0 /* RxSwiftInputValidateViewController.swift */; };
 		1896DA4922C5C113006154F0 /* RxSwiftInputValidateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1896DA4722C5C113006154F0 /* RxSwiftInputValidateViewController.xib */; };
 		1896DA4B22C5F890006154F0 /* RxSwiftInputValidateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896DA4A22C5F890006154F0 /* RxSwiftInputValidateViewModel.swift */; };
+		18E4FB4A23018CDA00FDF88A /* RxSubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E4FB4923018CDA00FDF88A /* RxSubjectViewController.swift */; };
 		EE54604822C3BCDB00AC2F6C /* YHTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE54604722C3BCDB00AC2F6C /* YHTool.swift */; };
 		EE710BC922C128750069D653 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE710BC822C128750069D653 /* AppDelegate.swift */; };
 		EE710BCB22C128750069D653 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE710BCA22C128750069D653 /* ViewController.swift */; };
@@ -60,6 +61,7 @@
 		1896DA4622C5C113006154F0 /* RxSwiftInputValidateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftInputValidateViewController.swift; sourceTree = "<group>"; };
 		1896DA4722C5C113006154F0 /* RxSwiftInputValidateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RxSwiftInputValidateViewController.xib; sourceTree = "<group>"; };
 		1896DA4A22C5F890006154F0 /* RxSwiftInputValidateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftInputValidateViewModel.swift; sourceTree = "<group>"; };
+		18E4FB4923018CDA00FDF88A /* RxSubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSubjectViewController.swift; sourceTree = "<group>"; };
 		19479809F2C08548E4748852 /* Pods-SwiftTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTool.debug.xcconfig"; path = "Target Support Files/Pods-SwiftTool/Pods-SwiftTool.debug.xcconfig"; sourceTree = "<group>"; };
 		5BC5EFB48A9F502735E19345 /* Pods-SwiftTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTool.release.xcconfig"; path = "Target Support Files/Pods-SwiftTool/Pods-SwiftTool.release.xcconfig"; sourceTree = "<group>"; };
 		E87066C106695801C3FFFABD /* Pods_SwiftTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,12 +135,21 @@
 		1896DA4522C5C0BA006154F0 /* RxSwiftExample */ = {
 			isa = PBXGroup;
 			children = (
+				18E4FB4523018C9300FDF88A /* Subject */,
 				181BE24522C4F0EE00EBB1DB /* RxSwiftExampleViewController.swift */,
 				1896DA4622C5C113006154F0 /* RxSwiftInputValidateViewController.swift */,
 				1896DA4722C5C113006154F0 /* RxSwiftInputValidateViewController.xib */,
 				1896DA4A22C5F890006154F0 /* RxSwiftInputValidateViewModel.swift */,
 			);
 			path = RxSwiftExample;
+			sourceTree = "<group>";
+		};
+		18E4FB4523018C9300FDF88A /* Subject */ = {
+			isa = PBXGroup;
+			children = (
+				18E4FB4923018CDA00FDF88A /* RxSubjectViewController.swift */,
+			);
+			path = Subject;
 			sourceTree = "<group>";
 		};
 		A0882D4809279247F1EB6F2F /* Pods */ = {
@@ -353,6 +364,7 @@
 				EE710BFB22C12AAB0069D653 /* NetworkRequestExampleViewController.swift in Sources */,
 				EE710BFD22C12C180069D653 /* YHPermission.swift in Sources */,
 				181BE21122C487A200EBB1DB /* JsonExampleViewController.swift in Sources */,
+				18E4FB4A23018CDA00FDF88A /* RxSubjectViewController.swift in Sources */,
 				181BE24622C4F0EE00EBB1DB /* RxSwiftExampleViewController.swift in Sources */,
 				1840BCD722C341AE00B6C2A8 /* YHBundleExtension.swift in Sources */,
 				EE710BEF22C129450069D653 /* YHHUD.swift in Sources */,

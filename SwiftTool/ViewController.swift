@@ -77,10 +77,10 @@ class ViewController: UIViewController {
         UIDevice.YHPrintBasicInfo()
         
         
-        let parameters:[String: Any] = ["latitude":  35.0094040,
-                                       "longitude": -85.3275640,
-                                       "tag": "this is my fancy tag",
-                                       "image":"icecream.jpg"]
+//        let parameters:[String: Any] = ["latitude":  35.0094040,
+//                                       "longitude": -85.3275640,
+//                                       "tag": "this is my fancy tag",
+//                                       "image":"icecream.jpg"]
         
         
 //        print(query(parameters).data(using: .utf8, allowLossyConversion: false))
@@ -182,7 +182,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         case .networkRequest:
             self.navigationController?.pushViewController(NetworkRequestExampleViewController(), animated: true)
         case .rxswift:
-            self.navigationController?.pushViewController(RxSwiftExampleViewController(), animated: true)
+            //self.navigationController?.pushViewController(RxSwiftExampleViewController(), animated: true)
+            self.navigationController?.pushViewController(RxSubjectViewController(), animated: true)
         default:
             break
         }
