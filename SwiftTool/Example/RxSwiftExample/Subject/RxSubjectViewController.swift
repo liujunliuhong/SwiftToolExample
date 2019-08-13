@@ -45,10 +45,6 @@ class RxSubjectViewController: UIViewController {
             make.edges.equalTo(view)
         }
     }
-    
-
-    
-
 }
 
 
@@ -67,14 +63,13 @@ extension RxSubjectViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.row == 0 {
-            // PublishSubject
             publishSubject()
         } else if indexPath.row == 1 {
-            
+            replaySubject()
         } else if indexPath.row == 2 {
-            
+            behaviorSubject()
         } else if indexPath.row == 3 {
-            
+            asyncSubject()
         }
     }
 }
@@ -93,7 +88,7 @@ extension RxSubjectViewController {
         subject.subscribe{ print("PublishSubject - 2: \($0)") }.disposed(by: disposeBag)
         subject.onNext("c")
         subject.onNext("d")
-        //subject.onError(MyError())
+        subject.onError(MyError())
         //subject.onCompleted()
         subject.onNext("e")
         //subject.onCompleted()
@@ -101,11 +96,58 @@ extension RxSubjectViewController {
 }
 
 extension RxSubjectViewController {
+    // 和PublishSubject相比，ReplaySubject会额外接收到订阅前最近发射的 N 条数据
+    // 如果把 ReplaySubject 当作观察者来使用，注意不要在多个线程调用 onNext, onError 或 onCompleted。这样会导致无序调用，将造成意想不到的结果
     func replaySubject() {
-        
+        let subject = ReplaySubject<String>.create(bufferSize: 2)
+        subject.subscribe{ print("ReplaySubject - 1: \($0)") }.disposed(by: disposeBag)
+        subject.onNext("a")
+        subject.onNext("b")
+        subject.onNext("c")
+        subject.subscribe{ print("ReplaySubject - 2: \($0)") }.disposed(by: disposeBag)
+        subject.onNext("d")
+        subject.onError(MyError())
+        subject.onCompleted()
+        subject.subscribe{ print("ReplaySubject - 3: \($0)") }.disposed(by: disposeBag)
     }
 }
 
+
+extension RxSubjectViewController {
+    // 当观察者对 BehaviorSubject 进行订阅时，它会将源 Observable 中最新的元素发送出来（如果不存在最新的元素，就发出默认元素）。然后将随后产生的元素发送出来。
+    // 如果源 Observable 因为产生了一个 error 事件而中止， BehaviorSubject 就不会发出任何元素，而是将这个 error 事件发送出来。
+    // 观察者会额外接收到订阅前最近发射的最近一条数据，如果订阅时还没有数据发射，那么会收到一个初始数据
+    func behaviorSubject() {
+        let subject = BehaviorSubject<String>(value: "初始数据")
+        subject.subscribe{ print("BehaviorSubject - 1: \($0)") }.disposed(by: disposeBag)
+        subject.onNext("a")
+        subject.onNext("b")
+        subject.onNext("c")
+        subject.subscribe{ print("BehaviorSubject - 2: \($0)") }.disposed(by: disposeBag)
+        subject.onNext("d")
+        subject.onError(MyError())
+        subject.onCompleted()
+        subject.subscribe{ print("BehaviorSubject - 3: \($0)") }.disposed(by: disposeBag)
+    }
+}
+
+extension RxSubjectViewController {
+    // AsyncSubject 将在源 Observable 产生完成事件后，发出最后一个元素（仅仅只有最后一个元素），如果源 Observable 没有发出任何元素，只有一个完成事件。那 AsyncSubject 也只有一个完成事件。(只有在产生完成事件或者error事件之后，才会发出元素)
+    // 它会对随后的观察者发出最终元素。如果源 Observable 因为产生了一个 error 事件而中止， AsyncSubject 就不会发出任何元素，而是将这个 error 事件发送出来。
+    func asyncSubject() {
+        let subject = AsyncSubject<String>()
+        subject.subscribe{ print("AsyncSubject - 1: \($0)") }.disposed(by: disposeBag)
+        subject.onNext("a")
+        subject.onNext("b")
+        subject.onNext("c")
+        subject.subscribe{ print("AsyncSubject - 2: \($0)") }.disposed(by: disposeBag)
+        subject.onNext("d")
+        //subject.onError(MyError())
+        subject.onCompleted()
+        subject.subscribe{ print("AsyncSubject - 3: \($0)") }.disposed(by: disposeBag)
+        subject.onCompleted()
+    }
+}
 
 struct MyError: LocalizedError {
     var errorDescription: String? {

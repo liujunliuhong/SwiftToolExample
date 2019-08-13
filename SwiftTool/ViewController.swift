@@ -183,7 +183,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             self.navigationController?.pushViewController(NetworkRequestExampleViewController(), animated: true)
         case .rxswift:
             //self.navigationController?.pushViewController(RxSwiftExampleViewController(), animated: true)
-            self.navigationController?.pushViewController(RxSubjectViewController(), animated: true)
+            //self.navigationController?.pushViewController(RxSubjectViewController(), animated: true)
+            //self.navigationController?.pushViewController(RxObservableViewController(), animated: true)
+            self.navigationController?.pushViewController(RxObserverViewController(), animated: true)
         default:
             break
         }
